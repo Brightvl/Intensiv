@@ -1,4 +1,9 @@
 package L1.hash_map;
 
-public class HashMap {
+/**
+ * Своя реализация HashMap
+ *
+ * @param <E>
+ */
+public class HashMap<E> {
 }
