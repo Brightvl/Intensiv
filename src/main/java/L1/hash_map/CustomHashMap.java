@@ -21,8 +21,17 @@ public class CustomHashMap<K, V> {
 
     }
 
-    public V get(K kye) {
-        throw new RuntimeException();
+    public V get(K key) {
+        int index = getHash(key) % DEFAULT_CAPACITY;
+        LinkedList<Entry<K, V>> bucket = buckets[index];
+
+        for (Entry<K, V> entry : bucket) {
+            if (entry.getKey().equals(key)) {
+                return entry.getValue();
+            }
+        }
+
+        return null;
     }
 
     public void remove(K key) {
@@ -30,7 +39,7 @@ public class CustomHashMap<K, V> {
     }
 
     public int getHash(K key) {
-        throw new RuntimeException();
+        return key == null ? 0 : key.hashCode();
     }
 
 }
