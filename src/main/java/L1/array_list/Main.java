@@ -1,8 +1,4 @@
-import L1.array_list.CustomArrayList;
-import org.w3c.dom.ls.LSOutput;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
+package L1.array_list;
 
 public class Main {
     public static void main(String[] args) {
